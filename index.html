@@ -3,39 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <title>Nikhil Raman | GenAI Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #020617);
       color: #e2e8f0;
-      text-align: center;
       padding: 40px 20px;
+      text-align: center;
     }
 
     h1 {
-      font-size: 42px;
+      font-size: 48px;
       margin-bottom: 10px;
+      background: linear-gradient(90deg, #3b82f6, #22c55e);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .subtitle {
       color: #94a3b8;
+      font-size: 18px;
       margin-bottom: 25px;
     }
 
     .btn {
       display: inline-block;
       margin: 10px;
-      padding: 12px 20px;
+      padding: 12px 22px;
+      background: rgba(59,130,246,0.2);
+      border: 1px solid rgba(59,130,246,0.5);
+      color: #3b82f6;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
       background: #3b82f6;
       color: white;
-      text-decoration: none;
-      border-radius: 10px;
+      transform: scale(1.05);
     }
 
     .section {
-      margin-top: 50px;
+      margin-top: 60px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #3b82f6;
     }
 
     .cards {
@@ -46,29 +70,51 @@
     }
 
     .card {
-      background: #1e293b;
+      background: rgba(30,41,59,0.6);
+      backdrop-filter: blur(10px);
       padding: 20px;
       width: 320px;
-      border-radius: 15px;
+      border-radius: 16px;
       text-align: left;
+      transition: 0.3s;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 20px rgba(59,130,246,0.3);
     }
 
     .card h3 {
-      color: #3b82f6;
+      color: #22c55e;
+      margin-bottom: 10px;
     }
 
     .text {
-      color: #cbd5f5;
       font-size: 14px;
+      color: #cbd5f5;
+      line-height: 1.6;
     }
 
     .tech {
-      margin-top: 20px;
+      max-width: 900px;
+      margin: auto;
       color: #94a3b8;
-      font-size: 15px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #3b82f6;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 60px;
+      color: #64748b;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -77,12 +123,13 @@
 
 <h1>Nikhil Raman</h1>
 <p class="subtitle">
-GenAI Engineer | RAG • Agents • MCP • Fine-Tuning | End-to-End AI Systems
+GenAI Engineer | RAG • Agents • MCP • Fine-Tuning  
+Building production-ready LLM systems with focus on reliability, evaluation, and scalable AI workflows.
 </p>
 
-<a class="btn" href="https://github.com/NikhilRaman12">GitHub</a>
-<a class="btn" href="https://www.linkedin.com/in/nikhil-raman-k-448589201/">LinkedIn</a>
-<a class="btn" href="https://raw.githubusercontent.com/NikhilRaman12/NIkhil-Raman-Portfolio/main/Nikhil_Raman_GenAI_Engineer_Resume.pdf">Download Resume</a>
+<a class="btn" href="https://github.com/NikhilRaman12" target="_blank">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/nikhil-raman-k-448589201/" target="_blank">LinkedIn</a>
+<a class="btn" href="https://raw.githubusercontent.com/NikhilRaman12/NIkhil-Raman-Portfolio/main/Nikhil_Raman_GenAI_Engineer_Resume.pdf" target="_blank">Download Resume</a>
 
 <div class="section">
 <h2>Selected AI Systems</h2>
@@ -92,85 +139,82 @@ GenAI Engineer | RAG • Agents • MCP • Fine-Tuning | End-to-End AI Systems
 <div class="card">
 <h3>Deep-Dent – Healthcare RAG</h3>
 <p class="text">
-Built a retrieval-augmented system using LangChain, FAISS, and HuggingFace embeddings.
-Implemented document ingestion and context-aware retrieval to reduce hallucinations.
+Built a domain-specific RAG system using LangChain and FAISS to improve response grounding and reduce hallucination in healthcare queries.
 </p>
+<div class="links">
+<a href="https://github.com/NikhilRaman12" target="_blank">View Project</a>
+</div>
 </div>
 
 <div class="card">
 <h3>ML-GateKeeper – Multi-Agent Pipeline</h3>
 <p class="text">
-Designed modular agent workflow with extraction, validation, and orchestration layers.
-Implemented structured AI pipelines using FastAPI and Docker.
+Designed modular multi-agent workflow for structured AI processing including validation, orchestration, and decision pipelines.
 </p>
+<div class="links">
+<a href="https://github.com/NikhilRaman12" target="_blank">View Project</a>
+</div>
 </div>
 
 <div class="card">
 <h3>TinyLlama Fine-Tuning</h3>
 <p class="text">
-Fine-tuned LLM using LoRA (PEFT) on Alpaca dataset (~1000 samples).
-Built full training pipeline and evaluated using perplexity and qualitative outputs.
+Fine-tuned LLM using LoRA (PEFT) on instruction dataset with end-to-end pipeline including evaluation and inference.
 </p>
+<div class="links">
+<a href="https://github.com/NikhilRaman12" target="_blank">View Project</a>
+</div>
 </div>
 
 <div class="card">
-<h3>Fraud Detection (ML)</h3>
+<h3>Fraud Detection System</h3>
 <p class="text">
-Developed anomaly detection using One-Class SVM on imbalanced datasets.
-Applied preprocessing, scaling, and validation techniques.
+Implemented anomaly detection using One-Class SVM on imbalanced datasets with preprocessing and validation pipeline.
 </p>
+<div class="links">
+<a href="https://github.com/NikhilRaman12" target="_blank">View Project</a>
+</div>
 </div>
 
 </div>
 </div>
 
 <div class="section">
-<h2>GenAI & LLM Systems</h2>
+<h2>Tech Stack</h2>
 <p class="tech">
-RAG Pipelines • Agents • MCP (Model Context Protocol) • Fine-Tuning (LoRA/PEFT) • LangChain • Transformers • FAISS • ChromaDB • Prompt Engineering • LLM Evaluation • Ollama (LLaMA/Mistral) • OpenAI • Claude • Gemini APIs • HuggingFace
+GenAI: RAG • Agents • MCP • LoRA • LangChain • Transformers • FAISS • ChromaDB • LLM Evaluation • HuggingFace  
+ML: XGBoost • Random Forest • Classification • Regression • Feature Engineering  
+Data: Python • SQL • Pandas • NumPy • PySpark • MongoDB  
+Deployment: Docker • FastAPI • Git • GitHub Actions • HuggingFace Spaces  
+Visualization: Streamlit • Gradio • Tableau • Power BI
 </p>
 </div>
 
 <div class="section">
-<h2>Machine Learning</h2>
+<h2>Ecosystem & Platforms</h2>
 <p class="tech">
-Regression • Classification • Clustering • Random Forest • XGBoost • Feature Engineering • Model Evaluation • Imbalanced Learning
-</p>
-</div>
-
-<div class="section">
-<h2>Programming & Data</h2>
-<p class="tech">
-Python • SQL • Pandas • NumPy • PySpark • MongoDB
-</p>
-</div>
-
-<div class="section">
-<h2>Deployment & Tools</h2>
-<p class="tech">
-Docker • FastAPI • Git • GitHub Actions • Hugging Face Spaces
-</p>
-</div>
-
-<div class="section">
-<h2>Visualization</h2>
-<p class="tech">
-Streamlit • Gradio • Tableau • Power BI • Matplotlib
-</p>
-</div>
-
-<div class="section">
-<h2>LLM Evaluation & Alignment</h2>
-<p class="tech">
-Prompt Engineering • Response Scoring • Preference Ranking • Safety & Bias Analysis
+<a href="https://www.kaggle.com/nikhilramank" target="_blank">Kaggle</a> •
+<a href="https://huggingface.co/NikhilRaman1203" target="_blank">HuggingFace</a> •
+<a href="https://devpost.com/NikhilRaman12" target="_blank">Devpost</a> •
+<a href="https://public.tableau.com/profile/nikhil.raman" target="_blank">Tableau</a> •
+<a href="https://share.streamlit.io/user/nikhilraman12" target="_blank">Streamlit</a> •
+<a href="https://hub.docker.com/u/nikhilraman12" target="_blank">DockerHub</a> •
+<a href="https://medium.com/@nikhilraman12_03" target="_blank">Medium</a> •
+<a href="https://dev.to/nikhilraman12" target="_blank">Dev.to</a>
 </p>
 </div>
 
 <div class="section">
 <h2>Open to Opportunities</h2>
 <p class="tech">
-Actively seeking GenAI / LLM Engineer roles to build scalable, reliable AI systems.
+Actively seeking GenAI / LLM Engineer roles to design and deploy scalable AI systems.
+<br><br>
+Contact: nikhilraman1203@gmail.com
 </p>
+</div>
+
+<div class="footer">
+© 2026 Nikhil Raman
 </div>
 
 </body>
